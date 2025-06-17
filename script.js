@@ -44,7 +44,6 @@ function updateList() {
     guests.forEach((guest, index) => {
         const li = document.createElement('li');
         
-        // Guest info section
         const infoDiv = document.createElement('div');
         infoDiv.className = 'guest-info';
         
@@ -58,7 +57,6 @@ function updateList() {
         
         infoDiv.append(nameSpan, categorySpan);
         
-        // Actions section
         const actionsDiv = document.createElement('div');
         actionsDiv.className = 'guest-actions';
         
@@ -73,7 +71,6 @@ function updateList() {
         
         actionsDiv.append(toggleBtn, removeBtn);
         
-        // Combine everything
         li.append(infoDiv, actionsDiv);
         guestList.appendChild(li);
     });
@@ -95,3 +92,5 @@ function removeGuest(index) {
     updateList();
     updateSpots();
 }
+
+updateSpots();
